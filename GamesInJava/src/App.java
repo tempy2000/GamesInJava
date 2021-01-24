@@ -1,4 +1,8 @@
+import java.util.Scanner;
+
 public class App {
+
+    private Scanner input = new Scanner(System.in);
 
     public App() {
 
@@ -10,7 +14,22 @@ public class App {
 
         System.out.println("Below, a series of games will be shown in a list. Menus can be navigated by entering the number corresponding to the option you want to select.");
         System.out.println("At anytime, please enter the number 0 (zero) to exit the system.");
-        
+
+        int choice = selection();
+        while (choice != 0) {
+            if (choice == 1) {
+                NumberGuessingGame game = new NumberGuessingGame();
+                game.run();
+            }
+        }
+    }
+
+    private int selection() {
+        System.out.println(
+            "The following games are currently available: \n" + 
+            "1: Number Guessing Game"
+        );
+        return input.nextInt();
     }
 
     public static void main(String[] args) throws Exception {
