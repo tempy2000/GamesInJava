@@ -21,6 +21,10 @@ public class App {
                 NumberGuessingGame game = new NumberGuessingGame();
                 game.run();
             }
+            else if (choice == 2) {
+                RockPaperScissors game = new RockPaperScissors();
+                game.run();
+            }
             choice = selection();
         }
         System.out.println("\nThank you for playing!");
@@ -30,7 +34,8 @@ public class App {
         System.out.println(
             "The following games are currently available: \n" + 
             "0: Quit\n" +
-            "1: Number Guessing Game"
+            "1: Number Guessing Gamen\n" +
+            "2: Rock, Paper, Scissors"
         );
         return input.nextInt();
     }
