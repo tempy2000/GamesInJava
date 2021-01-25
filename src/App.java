@@ -21,19 +21,21 @@ public class App {
                 NumberGuessingGame game = new NumberGuessingGame();
                 game.run();
             }
+            choice = selection();
         }
+        System.out.println("\nThank you for playing!");
     }
 
     private int selection() {
         System.out.println(
             "The following games are currently available: \n" + 
+            "0: Quit\n" +
             "1: Number Guessing Game"
         );
         return input.nextInt();
     }
 
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
         App a = new App();
         a.run();
     }
