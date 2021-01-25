@@ -12,7 +12,7 @@ public class RockPaperScissors {
     private String myChoice = "";
     private String userChoice = "";
 
-    private int decision = 0;
+    private int decision = -1;
 
     private String[] choices = {"Rock", "Paper", "Scissors"};
 
@@ -26,21 +26,36 @@ public class RockPaperScissors {
     }
 
     public void run() {
-        while (userChoice != "0") {
+        while (decision != 0) {
             myChoice = choices[random.nextInt(3)];
             System.out.println("Please enter your choice: ");
             decision = input.nextInt();
             input.nextLine();
-            userChoice = choices[(decision-1)];
-            comparison(myChoice, userChoice);
+            if (decision != 0) {
+                userChoice = choices[(decision-1)];
+                comparison(myChoice, userChoice);
+
+                System.out.println("\nCurrent Score: Me: " + myScore + ", You: " + userScore + "\n");
+            }
+            else {
+                break;
+            }
+        }
+        
+        if (myScore > userScore) {
+            System.out.println("I won! Thanks for playing! Returning to the main menu...\n");
+        }
+        else if (myScore < userScore) {
+            System.out.println("You won! Thanks for playing! Returning to the main menu...\n");
+        }
+        else {
+            System.out.println("It was a draw! Thanks for playing! Returning to the main menu...\n");
         }
     }
 
     private void comparison(String myChoice, String userChoice) {
         //Winning Combos: Rock vs Scissors, Scissors vs Paper, Paper vs Rock
         //Losing Combos: Scissors vs Rock, Rock vs Paper, Paper vs Scissors
-        System.out.println(myChoice);
-        System.out.println(userChoice);
         if (myChoice.equals(userChoice)) {
             //Draw
             System.out.println("It's a draw!");
@@ -48,10 +63,12 @@ public class RockPaperScissors {
         else if ((myChoice.equals("Rock") && userChoice.equals("Paper")) || (myChoice.equals("Paper") && userChoice.equals("Scissors")) || (myChoice.equals("Scissors") && userChoice.equals("Rock"))) {
             //User Win
             System.out.println("You win!");
+            userScore++;
         }
         else {
             //My Win
             System.out.println("I win!");
+            myScore++;
         }
     }
 }
