@@ -35,7 +35,8 @@ public class App {
             "The following games are currently available: \n" + 
             "0: Quit\n" +
             "1: Number Guessing Gamen\n" +
-            "2: Rock, Paper, Scissors"
+            "2: Rock, Paper, Scissors\n" +
+            "3: Noughts and Crosses"
         );
         return input.nextInt();
     }
