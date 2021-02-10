@@ -1,6 +1,6 @@
 ## Getting Started
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Welcome to the Games in Java repository. This is primarily built as a test of ideas, and a small project to keep me busy!
 
 ## Folder Structure
 
@@ -9,6 +9,8 @@ The workspace contains two folders by default, where:
 - `src`: the folder to maintain sources
 - `lib`: the folder to maintain dependencies
 
-## Dependency Management
+(Thanks to VSCode!
+)
+## How to Run
 
-The `JAVA DEPENDENCIES` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-pack/blob/master/release-notes/v0.9.0.md#work-with-jar-files-directly).
+If you choose to run this code, you'll need to download it, compile everything in the src folder, and then run App.java. The rest should explain itself!

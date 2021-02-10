@@ -1,6 +1,9 @@
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * The class RockPaperScissors, which holds the simple competition game. This is invoked from within App.
+ */
 public class RockPaperScissors {
 
     private Scanner input = new Scanner(System.in);
@@ -16,6 +19,9 @@ public class RockPaperScissors {
 
     private String[] choices = {"Rock", "Paper", "Scissors"};
 
+    /**
+     * The constructor, which handles the welcome messages and introduction.
+     */
     public RockPaperScissors() {
         System.out.println("Welcome to Rock, Paper, Scissors.");
         System.out.println("Here's how it works.");
@@ -25,6 +31,9 @@ public class RockPaperScissors {
         System.out.println("As usual, at anytime you can enter 0 to Quit.");
     }
 
+    /**
+     * The run() method, used to execute the game.
+     */
     public void run() {
         while (decision != 0) {
             myChoice = choices[random.nextInt(3)];
@@ -53,6 +62,11 @@ public class RockPaperScissors {
         }
     }
 
+    /**
+     * The comparison method, used to check the winning combinations and update the score.
+     * @param myChoice A String - the choice the computer has selected this turn.
+     * @param userChoice A String - the choice the user has selected this turn
+     */
     private void comparison(String myChoice, String userChoice) {
         //Winning Combos: Rock vs Scissors, Scissors vs Paper, Paper vs Rock
         //Losing Combos: Scissors vs Rock, Rock vs Paper, Paper vs Scissors

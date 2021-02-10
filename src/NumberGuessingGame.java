@@ -1,6 +1,9 @@
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * The class NumberGuessingGame, which holds the simple guessing game. This is invoked from within App.
+ */
 public class NumberGuessingGame {
 
     private Scanner input = new Scanner(System.in);
@@ -11,14 +14,21 @@ public class NumberGuessingGame {
     private int toGuess;
     private int guess;
 
-    private String feedback = "";
+    /**
+     * The constructor, used to output the welcome message.
+     */
 
     public NumberGuessingGame() {
         System.out.println("Welcome to the Number Guessing Game.");
     }
 
+    /**
+     * The run() method, sued to execute the game.
+     */
     public void run() {
         int choice = -1;
+        //The selection loop, where the game type is selected.
+        //TODO: Implement the computer guessing.
         while(choice != 0) {
             System.out.println("Would you like to guess (1), be the guesser (2), or quit (0)?");
             choice = input.nextInt();
@@ -43,6 +53,9 @@ public class NumberGuessingGame {
         }
     }
 
+    /**
+     * The method used when the computer is generating a number, and the user is guessing.
+     */
     private void computerGenerating() {
         System.out.println("Okay, let me think of a number...\n");
         toGuess = random.nextInt(boundry);
@@ -64,7 +77,14 @@ public class NumberGuessingGame {
         System.out.println("Congratulations, that was the right answer!");
     }
 
+    /**
+     * The method used when the computer is guessing the user's selected number.
+     * 
+     * THIS IS CURRENTLY NOT IMPLEMENTED.
+     */
     private void computerGuessing() {
+        System.out.println("Sorry, this feature isn't currently available.");
+        /*
         System.out.println("Okay, tell me when you've thought of a number! (Just hit the Enter key!)");
         input.nextLine();
         //Add the ability to add a boundry.
@@ -72,6 +92,6 @@ public class NumberGuessingGame {
         
         while (feedback != "c") {
             guess = random.nextInt(boundry);
-        }
+        }*/
     }
 }
