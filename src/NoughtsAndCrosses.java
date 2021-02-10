@@ -34,14 +34,21 @@ public class NoughtsAndCrosses {
         for(int i = 1; i <= board.size(); i++) {
             String value = board.get(i);
             if (value.equals("EMPTY")) {
-
+                System.out.println(i);
             }
             else if (value.equals("NOUGHT")) {
-
+                System.out.println("O");
             }
             else if (value.equals("CROSS")) {
-                
+                System.out.println("X");
             }
+
+            //Print the board layout
+
+            /*
+            if () {
+                
+            }*/
         }
     }
 }
