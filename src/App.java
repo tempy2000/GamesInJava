@@ -55,8 +55,9 @@ public class App {
         System.out.println(
             "The following games are currently available: \n" + 
             "0: Quit\n" +
-            "1: Number Guessing Game\n" +
-            "2: Rock, Paper, Scissors\n"
+            "1: Number Guessing Gamen\n" +
+            "2: Rock, Paper, Scissors\n" +
+            "3: Noughts and Crosses"
         );
         return input.nextInt();
     }

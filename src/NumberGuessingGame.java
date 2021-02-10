@@ -17,6 +17,7 @@ public class NumberGuessingGame {
     /**
      * The constructor, used to output the welcome message.
      */
+
     public NumberGuessingGame() {
         System.out.println("Welcome to the Number Guessing Game.");
     }
@@ -83,5 +84,14 @@ public class NumberGuessingGame {
      */
     private void computerGuessing() {
         System.out.println("Sorry, this feature isn't currently available.");
+        /*
+        System.out.println("Okay, tell me when you've thought of a number! (Just hit the Enter key!)");
+        input.nextLine();
+        //Add the ability to add a boundry.
+        System.out.println("Awesome, I'll start guessing! For each of my guesses, you can tell me if I'm higher (h/higher), lower (l/lower), or correct (c/correct).");
+        
+        while (feedback != "c") {
+            guess = random.nextInt(boundry);
+        }*/
     }
 }
